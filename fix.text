@@ -1,0 +1,300 @@
+You are a senior full-stack software architect and engineer.
+
+Your task is to design and generate a COMPLETE production-ready full-stack system for a **Homestay & Hotel Management Website**.
+
+You must generate:
+
+• Frontend code
+• Backend code
+• Database schema
+• Authentication system
+• Booking logic
+• Admin dashboard
+• API integrations
+• Folder structure
+
+The system must be modular, scalable and well-structured.
+
+---
+
+PROJECT OVERVIEW
+
+This platform will allow customers to book homestay or hotel rooms online.
+
+Customers can choose booking time using an hourly timeline.
+
+Hotel owners can manage operations using an admin dashboard.
+
+---
+
+TECH STACK
+
+Frontend:
+React + Vite
+TailwindCSS
+React Router
+Axios
+
+Backend:
+Node.js
+Express.js
+JWT authentication
+bcrypt password hashing
+Multer file upload
+
+Database:
+PostgreSQL
+
+Other integrations:
+
+OCR (ID card reading)
+Payment integration simulation
+Smart lock API simulation
+
+---
+
+SYSTEM MODULES
+
+1. AUTHENTICATION SYSTEM
+
+Users can:
+
+Register account
+Login
+Logout
+
+User roles:
+
+Admin
+Staff
+Customer
+
+Authentication must include:
+
+JWT token authentication
+Password encryption using bcrypt
+
+APIs:
+
+POST /auth/register
+POST /auth/login
+GET /auth/profile
+
+---
+
+2. CUSTOMER BOOKING WEBSITE
+
+Customers can:
+
+View room list
+View room details
+See available time slots
+Select check-in and check-out time
+
+Booking types:
+
+Hourly booking
+Daily booking
+
+System must prevent double booking.
+
+---
+
+3. ONLINE PAYMENT
+
+Payment flow:
+
+Customer creates booking
+Customer pays online
+Payment confirmation updates booking status
+
+Payment integration simulation using Stripe or VNPay.
+
+---
+
+4. SMART LOCK / GATE OPENING
+
+After booking confirmation:
+
+System generates temporary door access code.
+
+Customer can open the gate using booking code.
+
+Simulated API endpoint:
+
+POST /smartlock/open
+
+---
+
+5. CUSTOMER ID OCR
+
+Customer uploads ID card image.
+
+System extracts:
+
+Name
+ID number
+Date of birth
+
+Store extracted data in database.
+
+Use OCR library such as Tesseract.js.
+
+---
+
+6. ADMIN DASHBOARD
+
+Admin panel must include:
+
+Member management
+Room management
+Booking management
+Housekeeping management
+Revenue reports
+
+Housekeeping room statuses:
+
+Not cleaned
+Cleaning
+Cleaned
+
+---
+
+7. REVENUE ANALYTICS
+
+Admin dashboard must display:
+
+Daily revenue
+Monthly revenue
+Total bookings
+Room occupancy rate
+
+Use chart components.
+
+---
+
+DATABASE TABLES
+
+users
+rooms
+bookings
+payments
+housekeeping
+smartlock_access
+customer_ids
+
+---
+
+PROJECT STRUCTURE
+
+hotel-management-system
+
+frontend
+src
+pages
+components
+layouts
+services
+hooks
+utils
+
+backend
+controllers
+routes
+models
+middleware
+services
+config
+
+database
+schema.sql
+
+---
+
+FRONTEND PAGES
+
+Home
+Rooms
+RoomDetail
+Booking
+Login
+Register
+Profile
+AdminDashboard
+
+Admin dashboard sections:
+
+Room management
+Booking management
+Customer list
+Housekeeping
+Revenue analytics
+
+---
+
+BOOKING SYSTEM LOGIC
+
+Booking must support:
+
+Hourly timeline booking
+Availability checking
+Prevent overlapping bookings
+
+---
+
+OUTPUT REQUIREMENTS
+
+Generate:
+
+Full folder structure
+All backend source code
+React frontend code
+Database SQL schema
+API endpoints
+Environment configuration
+Example API requests
+
+---
+
+RUNNING INSTRUCTIONS
+
+Backend:
+
+npm install
+node server.js
+
+Frontend:
+
+npm install
+npm run dev
+
+---
+
+TASK MANAGEMENT
+
+Break the development into modules and generate code step by step.
+
+Modules:
+
+1. Authentication system
+2. Database schema
+3. Backend APIs
+4. Booking system
+5. Payment system
+6. Smart lock system
+7. OCR system
+8. Admin dashboard
+9. Frontend pages
+10. API integration
+
+---
+
+AUTO DEBUGGING
+
+After generating code:
+
+Check for missing dependencies
+Fix syntax errors
+Ensure backend and frontend can run correctly
+
+If any error occurs, automatically provide the fix.
